@@ -20,6 +20,10 @@
 	ln -s ~/.dotfiles/.local/share/konsole/Bernstein.colorscheme ~/.local/share/konsole/Bernstein.colorscheme
 	ln -s ~/.dotfiles/.local/share/konsole/Profil\ 1.profile ~/.local/share/konsole/Profil\ 1.profile
 
+## Micro
+	ln -s ~/.dotfiles/.config/micro/bindings.json ~/.config/micro/bindings.json
+
 ## Pacman
 	sudo ln -s ~/.dotfiles/etc/pacman.conf /etc/pacman.conf
+
 ---
