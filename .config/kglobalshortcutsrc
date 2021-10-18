@@ -1,5 +1,6 @@
 [ActivityManager]
 _k_friendly_name=Aktivitätenverwaltung
+switch-to-activity-62a663da-0477-42cc-8a6a-241877df38cd=none,none,Zu Aktivität „Standard“ wechseln
 switch-to-activity-bfa203d6-d5b1-4fab-8fa1-3830e59e17f2=none,none,Zu Aktivität „Casual“ wechseln
 switch-to-activity-ffffffff-ffff-4fff-bfff-ffffffffffff=none,none,Zu Aktivität „Standard“ wechseln
 
@@ -30,15 +31,16 @@ Show System Activity=Ctrl+Esc,Ctrl+Esc,Systemaktivität anzeigen
 _k_friendly_name=KDE Daemon
 display=Display\tMeta+P,Display\tMeta+P,Anzeige wechseln
 
-[keepass.desktop]
-_k_friendly_name=KeePass Password Safe starten
-_launch=none,none,KeePass Password Safe starten
-
 [khotkeys]
 _k_friendly_name=Dienst für eigene Kurzbefehle
-{a0031812-f40a-4035-a122-ba30b5965b32}=Ctrl+Alt+P,none,KeePassXC
-{d0223555-708c-4579-b5ca-bb6468c0cf7b}=Ctrl+Print,none,Flameshot Gui
-{ffffffff-ffff-4fff-bfff-ffffffffffff}=none,none,Konsole starten
+{3c7ead73-00ad-4f90-bdba-5d15a70b8b43}=,none,Take full-screen screenshot and save
+{65ecb470-7d89-497a-9f9d-406b068f7207}=,none,Take screenshot
+{7d1c573e-f9ee-4fc2-9033-5ebfddba794a}=,none,Launch Konsole
+{a724b514-0cb6-40f0-bf14-c08db726b320}=Ctrl+Shift+Print,none,Take full-screen screenshot and copy it to clipboard
+{be12ba37-674c-4715-a674-3a70f8984c0c}=,none,KeePassXC
+{cb663cb4-70be-42ab-8627-b3303642ef5b}=Meta+F,none,Firefox
+{cea82966-75d5-437d-afaf-aeba83a4abfd}=,none,Take screenshot with delay
+{d03619b6-9b3c-48cc-9d9c-a2aadb485550}=none,none,Suchen
 
 [kmix]
 _k_friendly_name=Lautstärke
@@ -56,11 +58,11 @@ toggle_mainwindow_visibility=none,none,Konversation anzeigen/ausblenden
 
 [ksmserver]
 Halt Without Confirmation=Ctrl+Alt+Shift+PgDown,none,Ohne Rückfrage herunterfahren
-Lock Session=Screensaver\tCtrl+Alt+L\tMeta+L,Meta+L\tCtrl+Alt+L\tScreensaver,Sitzung sperren
+Lock Session=Screensaver\tCtrl+Alt+L\tMeta+L,Meta+L\tCtrl+Alt+L\tScreensaver,Lock Session
 Log Out=Ctrl+Alt+Del,Ctrl+Alt+Del,Abmelden
 Log Out Without Confirmation=Ctrl+Alt+Shift+Del,none,Ohne Rückfrage abmelden
 Reboot Without Confirmation=Ctrl+Alt+Shift+PgUp,none,Ohne Rückfrage neu starten
-_k_friendly_name=Sitzungsverwaltung
+_k_friendly_name=Session Management
 
 [kwin]
 Activate Window Demanding Attention=Ctrl+Alt+A,Ctrl+Alt+A,Fenster aktivieren\\, das Aufmerksamkeit erfordert
@@ -290,6 +292,10 @@ WindowUnderCursorScreenShot=Meta+Ctrl+Print,Meta+Ctrl+Print,Fenster unter dem Ma
 _k_friendly_name=Spectacle
 _launch=Print,Print,Spectacle starten
 
+[org.keepassxc.KeePassXC.desktop]
+_k_friendly_name=KeePassXC
+_launch=Ctrl+Alt+P,,KeePassXC
+
 [org.manjaro.pamac.manager.desktop]
 _k_friendly_name=Software hinzufügen/entfernen
 _launch=Meta+U,,Software hinzufügen/entfernen
@@ -326,7 +332,7 @@ activate task manager entry 8=Meta+8,Meta+8,Fensterleisteneintrag 8 aktivieren
 activate task manager entry 9=Meta+9,Meta+9,Fensterleisteneintrag 9 aktivieren
 activate widget 259=none,none,Miniprogramm Systemlast-Anzeige aktivieren
 activate widget 277=none,none,Miniprogramm Fensterleiste nur mit Symbolen aktivieren
-activate widget 281=Alt+F1,none,Miniprogramm Anwendungsübersicht aktivieren
+activate widget 281=,none,Miniprogramm Anwendungsübersicht aktivieren
 activate widget 435=,none,Miniprogramm Anwendungs-Starter aktivieren
 activate widget 439=none,none,Miniprogramm Anwendungs-Starter aktivieren
 activate widget 454=none,none,Miniprogramm Fensterleiste aktivieren
@@ -334,7 +340,9 @@ activate widget 490=,none,Miniprogramm Anwendungs-Starter aktivieren
 activate widget 522=none,none,Miniprogramm Anwendungs-Starter aktivieren
 activate widget 524=,none,Miniprogramm Anwendungs-Starter aktivieren
 activate widget 601=,none,Miniprogramm Anwendungs-Starter aktivieren
+activate widget 69=Alt+F1,none,Miniprogramm Anwendungsübersicht aktivieren
 activate widget 92=none,none,Miniprogramm Fensterleiste aktivieren
+activate widget 94=Meta+Space,none,Miniprogramm Present Windows Button aktivieren
 clear-history=none,none,Bisherigen Inhalt der Zwischenablage löschen
 clipboard_action=Ctrl+Alt+X,Ctrl+Alt+X,Zwischenablageaktionen aktivieren
 cycleNextAction=none,none,Nächstes Element im Verlauf
