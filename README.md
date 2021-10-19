@@ -18,9 +18,6 @@
 ## Konsole
     ln -s ~/.dotfiles/.local/share/konsole/Bernstein.colorscheme ~/.local/share/konsole/Bernstein.colorscheme
     ln -s ~/.dotfiles/.local/share/konsole/Profil\ 1.profile ~/.local/share/konsole/Profil\ 1.profile
-    
-## KDE Plasma global keybindings
-    ln -s ~/.dotfiles/.config/kglobalshortcutsrc ~/.config/kglobalshortcutsrc
 
 ## Micro Keybindings
     ln -s ~/.dotfiles/.config/micro/bindings.json ~/.config/micro/bindings.json
