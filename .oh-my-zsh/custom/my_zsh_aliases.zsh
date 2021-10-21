@@ -1,4 +1,5 @@
 #list
+alias ls='ls -lh --color=yes'
 alias la='ls -ah --color=yes | more'
 alias ll='ls -lah --color=yes | more'
 alias l.="ls -A | egrep '^\.'"
