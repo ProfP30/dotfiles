@@ -112,6 +112,3 @@ LS_COLORS='ow=01;36;40'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # neofetch
-wtfis() {
-  curl "https://cheat.sh/$1"
-}

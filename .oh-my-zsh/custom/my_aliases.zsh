@@ -57,7 +57,15 @@ ex ()
   fi
 }
 
-alias myip="curl http://ipecho.net/plain; echo"
+#alias myip="curl http://ipecho.net/plain; echo"
+alias myip="curl https://ifconfig.me; echo"
 alias jctl="journalctl -p 3 -xb"
 
 alias flatpak-list='flatpak list --columns=name,application,version,branch,size'
+wmv2mp4() {
+	ffmpeg -i $1.wmv -c:v libx264 -crf 23 $1.mp4
+}
+
+wtfis() {
+  curl "https://cheat.sh/$1"
+}
