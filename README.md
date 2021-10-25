@@ -20,7 +20,7 @@
     ln -s ~/.dotfiles/.local/share/konsole/Bernstein.colorscheme ~/.local/share/konsole/Bernstein.colorscheme
     ln -s ~/.dotfiles/.local/share/konsole/Profil\ 1.profile ~/.local/share/konsole/Profil\ 1.profile
 
-## Micro Keybindings
+## Micro Editor Keybindings
     ln -s ~/.dotfiles/.config/micro/bindings.json ~/.config/micro/bindings.json
 
 ## Pacman
