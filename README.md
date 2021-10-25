@@ -13,8 +13,8 @@
     ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 
 ## Aliases and functions
-    ln -s ~/.dotfiles/.oh-my-zsh/custom/my_aliases.zsh ~/.oh-my-zsh/custom/my_aliases.zsh
-    ln -s ~/.dotfiles/.oh-my-zsh/custom/my_functions.zsh ~/.oh-my-zsh/custom/my_functions.zsh
+    ln -s ~/.dotfiles/my_aliases.zsh ~/.oh-my-zsh/custom/my_aliases.zsh
+    ln -s ~/.dotfiles/my_functions.zsh ~/.oh-my-zsh/custom/my_functions.zsh
 
 ## Konsole
     ln -s ~/.dotfiles/.local/share/konsole/Bernstein.colorscheme ~/.local/share/konsole/Bernstein.colorscheme
