@@ -24,8 +24,8 @@ alias cd..='cd ..'
 if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ]; then
     #alias update='sudo apt update && sudo apt upgrade'
     export UPD_CMD='sudo apt update && sudo apt upgrade'
-elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'Manjaro' ]; then    
-    # check if Pamac is installed (but suppress output of the check)   
+elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'ManjaroLinux' ]; then
+    # check if Pamac is installed (but suppress output of the check)
     if which 'pamac' &> /dev/null; then
         #alias update='pamac update'
         export UPD_CMD='sudo pamac update'
