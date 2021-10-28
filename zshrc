@@ -12,6 +12,8 @@ export ZSH="/home/$USER/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 
+export DISTRO="$(lsb_release -si)"
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -90,10 +92,15 @@ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ]; then
+    plugins=(zsh-history-substring-search.zsh)
+	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'Manjaro' ]; then
+	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+	source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+	source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+fi
 
 export LC_ALL="de_DE.UTF-8"
 export LANGUAGE="de_DE.UTF-8"

@@ -20,7 +20,7 @@ alias cls='clear'
 alias cd..='cd ..'
 #alias update='sudo pacman -Syy'
 #alias upgrade='sudo pacman -Su'
-DISTRO=$(lsb_release -si)
+#DISTRO=$(lsb_release -si)
 if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ]; then
     alias update='sudo apt update && sudo apt upgrade'
 elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'Manjaro' ]; then    
