@@ -22,22 +22,29 @@ alias cd..='cd ..'
 #alias upgrade='sudo pacman -Su'
 #DISTRO=$(lsb_release -si)
 if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ]; then
-    alias update='sudo apt update && sudo apt upgrade'
+    #alias update='sudo apt update && sudo apt upgrade'
+    export UPD_CMD='sudo apt update && sudo apt upgrade'
 elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'Manjaro' ]; then    
     # check if Pamac is installed (but suppress output of the check)   
     if which 'pamac' &> /dev/null; then
-        alias update='pamac update'
+        #alias update='pamac update'
+        export UPD_CMD='sudo pamac update'
     # check if Yay is installed (but suppress output of the check)   
     elif which 'yay' &> /dev/null; then
-        alias update='yay -Syu'
+        #alias update='yay -Syu'
+        export UPD_CMD='yay -Syu'
     else
-        alias update='sudo pacman -Syu'
+        #alias update='sudo pacman -Syu'
+        export UPD_CMD='sudo pacman -Syu'
     fi
 fi
 
 # check if Flatpak is installed (but suppress output of the check)   
 if which 'flatpak' &> /dev/null; then
-  alias update='flatpak update'
+    #UPD_CMD=$(alias update)
+    alias update="$UPD_CMD && flatpak update"
+else
+	alias update="$UPD_CMD"
 fi
 
 #alias myip="curl http://ipecho.net/plain; echo"
