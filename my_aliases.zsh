@@ -18,6 +18,9 @@ alias signout='logout'
 #fix obvious typos
 alias cls='clear'
 alias cd..='cd ..'
+
+alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
 #alias update='sudo pacman -Syy'
 #alias upgrade='sudo pacman -Su'
 #DISTRO=$(lsb_release -si)
