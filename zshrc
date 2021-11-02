@@ -96,7 +96,7 @@ if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = '
     plugins=(zsh-history-substring-search.zsh)
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'Manjaro' ]; then
+elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'ManjaroLinux' ]; then
 	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 	source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
