@@ -43,7 +43,7 @@ elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  =
 fi
 
 # check if Flatpak is installed (but suppress output of the check)   
-if which 'flatpak' &> /dev/null; then
+if command -v 'flatpak' &> /dev/null; then
     #UPD_CMD=$(alias update)
     alias update="$UPD_CMD && flatpak update"
 else
