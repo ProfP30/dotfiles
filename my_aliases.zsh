@@ -31,7 +31,7 @@ elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  =
     # check if Pamac is installed (but suppress output of the check)
     if which 'pamac' &> /dev/null; then
         #alias update='pamac update'
-        export UPD_CMD='sudo pamac update'
+        export UPD_CMD='sudo pamac update --no-confirm'
     # check if Yay is installed (but suppress output of the check)   
     elif which 'yay' &> /dev/null; then
         #alias update='yay -Syu'
