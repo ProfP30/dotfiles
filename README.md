@@ -15,11 +15,11 @@ yay|AUR Helper (when on Arch-based Distro)
 
 1. Step Activate ZSH as Shell if not done already
 
-    `sudo chsh --shell /bin/bash $USERNAME`
+    sudo chsh --shell /bin/bash $USERNAME
 
 2. Step: Install oh-my-zsh Extension for ZSH Shell
 
-    `sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"`
+    sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
 3. Step: Install recommended plugins
 
@@ -34,7 +34,7 @@ On Arch/Manjaro/EndeavourOS/Arco:
 
 On Debian/Ubuntu/MX Linux/Siduction:
 
-    `sudo apt install zsh-syntax-highlighting zsh-autosuggestions autojump`
+    sudo apt install zsh-syntax-highlighting zsh-autosuggestions autojump
 
 
 # Installation
