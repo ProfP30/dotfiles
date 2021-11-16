@@ -73,6 +73,7 @@ export DISTRO="$(lsb_release -si)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
+plugins=(zsh-history-substring-search.zsh)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,13 +94,11 @@ fi
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ]; then
-    plugins=(zsh-history-substring-search.zsh)
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'ManjaroLinux' ]; then
 	source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-	source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 fi
 
 export LC_ALL="de_DE.UTF-8"
