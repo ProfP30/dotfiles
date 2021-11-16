@@ -13,15 +13,15 @@ yay|AUR Helper (when on Arch-based Distro)
 
 ## Installation
 
-1. Step Activate ZSH as Shell if not done already
+Step 1: Activate ZSH as Shell if not done already
 
     sudo chsh --shell /bin/bash $USERNAME
 
-2. Step: Install oh-my-zsh Extension for ZSH Shell
+Step 2: Install oh-my-zsh Extension for ZSH Shell
 
     sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
 
-3. Step: Install recommended plugins
+Step 3: Install recommended plugins
 
 - zsh-syntax-highlighting - syntax highlighting for ZSH in standard repos
 - zsh-autosuggestions - Suggestions based on your history
