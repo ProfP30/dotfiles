@@ -1,8 +1,8 @@
-## Why ZSH?
+# Why ZSH?
 
 ZSH is an amazing shell that just makes everything a bit easier from auto suggestions, completing tasks you do regularly considerably faster.
 
-## Dependencies
+# Dependencies
 
 Packages needed before you start:
 
@@ -11,7 +11,7 @@ Package|Description
 zsh|ZSH Shell
 yay|AUR Helper (when on Arch-based Distro)
 
-## Installation
+# Installation of ZSH
 
 Step 1: Activate ZSH as Shell if not done already
 
@@ -37,11 +37,11 @@ On Debian/Ubuntu/MX Linux/Siduction:
     sudo apt install zsh-syntax-highlighting zsh-autosuggestions autojump
 
 
-# Installation
+# Installation of my dotfiles
     
     git clone https://github.com/ProfP30/dotfiles.git ~/.dotfiles
 
-# Symlinks
+# Creating necessary Symlinks
 
 ## Config files
     ln -s ~/.dotfiles/zshrc ~/.zshrc
