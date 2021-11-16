@@ -29,9 +29,11 @@ yay|AUR Helper (when on Arch-based Distro)
 - autojump - jump to directories with j or jc for child or jo to open in file manager
 
 On Arch/Manjaro/EndeavourOS/Arco:
+
     sudo pacman -S zsh-syntax-highlighting zsh-autosuggestions && yay autojump
 
 On Debian/Ubuntu/MX Linux/Siduction:
+
     `sudo apt install zsh-syntax-highlighting zsh-autosuggestions autojump`
 
 
