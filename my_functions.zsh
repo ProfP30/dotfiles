@@ -1,9 +1,10 @@
 #!/bin/bash
-logout()
-{
-    case $DESKTOP_SESSION in
+ logout()
+ {
+    case $XDG_CURRENT_DESKTOP in
        xfce) xfce4-session-logout --logout                     ;;
-       mate) mate-session-save --logout-dialog                 ;;
+       mate) mate-session-save --logout                        ;;
+       MATE) mate-session-save --logout                        ;;
        lxqt) lxqt-leave --logout                               ;;
        *plasma*) qdbus org.kde.ksmserver /KSMServer logout 0 3 3 ;;
 

@@ -12,8 +12,9 @@ alias grep='grep --colour=auto'
 alias egrep='egrep --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
-alias logoff='logout'
-alias signout='logout'
+alias shutdown='systemctl poweroff'
+alias poweroff='systemctl poweroff'
+alias reboot='systemctl reboot'
 
 #fix obvious typos
 alias cls='clear'
