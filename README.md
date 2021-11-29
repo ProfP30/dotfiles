@@ -36,6 +36,10 @@ On Debian/Ubuntu/MX Linux/Siduction:
 
     sudo apt install zsh-syntax-highlighting zsh-autosuggestions autojump
 
+On Fedora:
+
+    sudo dnf install redhat-lsb-core zsh-syntax-highlighting zsh-autosuggestions autojump -y
+
 
 # Installation of my dotfiles
     
@@ -44,7 +48,7 @@ On Debian/Ubuntu/MX Linux/Siduction:
 # Creating necessary Symlinks
 
 ## Config files
-    ln -s ~/.dotfiles/zshrc ~/.zshrc
+    rm ~/.zshrc && ln -s ~/.dotfiles/zshrc ~/.zshrc
     ln -s ~/.dotfiles/bashrc ~/.bashrc
     ln -s ~/.dotfiles/bash_profile ~/.bash_profile
 
@@ -54,10 +58,10 @@ On Debian/Ubuntu/MX Linux/Siduction:
 
 ## Konsole
     ln -s ~/.dotfiles/.local/share/konsole/Bernstein.colorscheme ~/.local/share/konsole/Bernstein.colorscheme
-    ln -s ~/.dotfiles/.local/share/konsole/Profil\ 1.profile ~/.local/share/konsole/Profil\ 1.profile
+    rm ~/.local/share/konsole/Profil\ 1.profile && ln -s ~/.dotfiles/.local/share/konsole/Profil\ 1.profile ~/.local/share/konsole/Profil\ 1.profile
 
 ## Micro Editor Keybindings
-    ln -s ~/.dotfiles/.config/micro/bindings.json ~/.config/micro/bindings.json
+    rm ~/.config/micro/bindings.json && ln -s ~/.dotfiles/.config/micro/bindings.json ~/.config/micro/bindings.json
 
 ## Pacman
     sudo ln -s ~/.dotfiles/etc/pacman.conf /etc/pacman.conf
