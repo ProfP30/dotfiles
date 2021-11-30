@@ -91,6 +91,8 @@ else
   export EDITOR='micro'
 fi
 
+export SUDO_EDITOR='micro'
+
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ] || [ "$DISTRO"  = 'Fedora' ]; then
