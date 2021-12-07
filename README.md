@@ -13,9 +13,17 @@ yay|AUR Helper (when on Arch-based Distro)
 
 # Installation of ZSH
 
+Step 0: Install ZSH if not already installed
+
+- Via APT
+    sudo apt install zsh
+    
+- Via Pacman
+    sudo pacman -S zsh
+
 Step 1: Activate ZSH as Shell if not done already
 
-    sudo chsh --shell /bin/bash $USERNAME
+    sudo chsh --shell /usr/bin/zsh $USERNAME
 
 Step 2: Install oh-my-zsh Extension for ZSH Shell
 
