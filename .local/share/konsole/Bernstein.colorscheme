@@ -89,7 +89,7 @@ Color=239,240,241
 Color=255,255,255
 
 [General]
-Blur=false
+Blur=true
 ColorRandomization=false
 Description=Bernstein
 Opacity=1
