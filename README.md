@@ -13,9 +13,18 @@ yay|AUR Helper (when on Arch-based Distro)
 
 # Installation of ZSH
 
+Step 0: Install ZSH (and recommended font "Hack") if not already installed
+Via APT:
+
+    sudo apt install zsh fonts-hack
+    
+Via Pacman:
+
+    sudo pacman -S zsh ttf-hack
+
 Step 1: Activate ZSH as Shell if not done already
 
-    sudo chsh --shell /bin/bash $USERNAME
+    sudo chsh --shell /usr/bin/zsh $USER
 
 Step 2: Install oh-my-zsh Extension for ZSH Shell
 
