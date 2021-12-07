@@ -14,12 +14,11 @@ yay|AUR Helper (when on Arch-based Distro)
 # Installation of ZSH
 
 Step 0: Install ZSH if not already installed
-
-- Via APT
+Via APT:
 
     sudo apt install zsh
     
-- Via Pacman
+Via Pacman:
 
     sudo pacman -S zsh
 
