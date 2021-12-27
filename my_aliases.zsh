@@ -26,20 +26,15 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 #alias upgrade='sudo pacman -Su'
 #DISTRO=$(lsb_release -si)
 if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ]; then
-    #alias update='sudo apt update && sudo apt upgrade'
     export UPD_CMD='sudo apt update && sudo apt upgrade'
 elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'ManjaroLinux' ]; then
+    export UPD_CMD='sudo pacman -Syy'
     # check if Pamac is installed (but suppress output of the check)
     if which 'pamac' &> /dev/null; then
-        #alias update='pamac update'
-        export UPD_CMD='sudo pamac update --no-confirm'
+        export UPD_CMD="$UPD_CMD && sudo pamac update --no-confirm"
     # check if Yay is installed (but suppress output of the check)   
     elif which 'yay' &> /dev/null; then
-        #alias update='yay -Syu'
-        export UPD_CMD='yay -Syu'
-    else
-        #alias update='sudo pacman -Syu'
-        export UPD_CMD='sudo pacman -Syu'
+        export UPD_CMD="$UPD_CMD && yay -Syu"
     fi
 fi
 
