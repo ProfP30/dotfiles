@@ -24,7 +24,7 @@ Via Pacman:
 
 Step 1: Activate ZSH as Shell if not done already
 
-    sudo chsh --shell /usr/bin/zsh $USER
+    chsh --shell /usr/bin/zsh
 
 Step 2: Install oh-my-zsh Extension for ZSH Shell
 
