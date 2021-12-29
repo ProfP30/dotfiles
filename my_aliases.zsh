@@ -51,3 +51,5 @@ alias myip="curl https://ifconfig.me; echo"
 alias jctl="journalctl -p 3 -xb"
 
 alias flatpak-list='flatpak list --columns=name,application,version,branch,size'
+alias google='{read -r arr; browser "https://google.com/search?q=${arr}";} <<<'
+alias search='{read -r arr; xdg-open "https://www.ecosia.org/search?q=${arr}";} <<<'
