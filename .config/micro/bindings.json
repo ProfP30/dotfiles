@@ -3,5 +3,5 @@
     "CtrlUnderscore": "lua:comment.comment",
     "Ctrl-f": "FindLiteral",
     "F3": "FindNext",
-    "Ctrl-g": "command-edit:goto "
+    "Ctrl-g": "command-edit:goto"
 }
