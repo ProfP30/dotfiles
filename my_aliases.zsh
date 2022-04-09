@@ -26,7 +26,11 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 #alias upgrade='sudo pacman -Su'
 #DISTRO=$(lsb_release -si)
 if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ]; then
-    export UPD_CMD='sudo apt update && sudo apt upgrade'
+    if which 'nala' &> /dev/null; then
+      export UPD_CMD='sudo nala update && sudo nala upgrade'
+    else
+      export UPD_CMD='sudo apt update && sudo apt upgrade'
+    fi
 elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'ManjaroLinux' ]; then
     export UPD_CMD='sudo pacman -Syy'
     # check if Pamac is installed (but suppress output of the check)
