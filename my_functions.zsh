@@ -5,7 +5,7 @@
        xfce) xfce4-session-logout --logout                     ;;
        mate) mate-session-save --logout                        ;;
        MATE) mate-session-save --logout                        ;;
-       lxqt) lxqt-leave --logout                               ;;
+       LXQt) lxqt-leave --logout                               ;;
        *KDE*) qdbus org.kde.ksmserver /KSMServer logout 0 3 3  ;;
 
        *) echo "Sorry, Desktop Environment is uknown (no xfce/mate/lxqt/plasma)!" ;;
