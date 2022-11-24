@@ -73,7 +73,7 @@ export DISTRO="$(lsb_release -si)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
-plugins=(history-substring-search)
+plugins=(sudo history-substring-search)
 
 source $ZSH/oh-my-zsh.sh
 
