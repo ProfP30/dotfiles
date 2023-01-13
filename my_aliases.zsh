@@ -46,8 +46,10 @@ fi
 if command -v 'flatpak' &> /dev/null; then
     #UPD_CMD=$(alias update)
     alias update="$UPD_CMD && flatpak update"
+    # alias UpdateInTerminal="$UPD_CMD && flatpak update"
 else
 	alias update="$UPD_CMD"
+	# alias UpdateInTerminal="$UPD_CMD"
 fi
 
 #alias myip="curl http://ipecho.net/plain; echo"
