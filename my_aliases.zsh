@@ -27,9 +27,14 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 #DISTRO=$(lsb_release -si)
 if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ]; then
     if which 'nala' &> /dev/null; then
-      export UPD_CMD='sudo nala update && sudo nala upgrade'
+      export UPD_CMD='sudo nala upgrade'
     else
       export UPD_CMD='sudo apt update && sudo apt upgrade'
+    fi
+
+    # check if pacstall is installed (but suppress output of the check)   
+    if which 'pacstall' &> /dev/null; then
+        export UPD_CMD="$UPD_CMD && pacstall -Up"
     fi
 elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'ManjaroLinux' ]; then
     export UPD_CMD='sudo pacman -Syy'
