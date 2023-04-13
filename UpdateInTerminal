@@ -1,0 +1,44 @@
+#!/bin/bash
+
+Main() {
+    local update_cmd=""
+    local DISTRO="$(lsb_release -si)"
+
+    if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ]; then
+        # check if nala is installed (but suppress output of the check)
+        if which 'nala' &> /dev/null; then
+            update_cmd='sudo nala update && sudo nala upgrade'
+        else
+            update_cmd='sudo apt update && sudo apt upgrade'
+        fi
+    elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'ManjaroLinux' ]; then
+        update_cmd='sudo pacman -Syy'
+        # check if pamac is installed (but suppress output of the check)
+        if which 'pamac' &> /dev/null; then
+            update_cmd="sudo pamac update --aur --no-confirm"
+        # check if yay is installed (but suppress output of the check)
+        elif which 'yay' &> /dev/null; then
+            update_cmd="$update_cmd && yay -Syu"
+        fi
+    fi
+
+    # check if Flatpak is installed (but suppress output of the check)
+    if command -v 'flatpak' &> /dev/null; then
+        update_cmd="$update_cmd && flatpak update"
+    fi
+
+    # check if Pacstall is installed (but suppress output of the check)
+    if command -v 'pacstall' &> /dev/null; then
+        update_cmd="$update_cmd && pacstall -Up"
+    fi
+
+    # display and execute the command
+    echo "- System update with: $update_cmd"
+    eval "$update_cmd"
+    echo ""
+
+    exit
+
+}
+
+Main "$@"
