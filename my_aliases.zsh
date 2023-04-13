@@ -22,41 +22,6 @@ alias cd..='cd ..'
 
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
-#alias update='sudo pacman -Syy'
-#alias upgrade='sudo pacman -Su'
-#DISTRO=$(lsb_release -si)
-if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ]; then
-    if which 'nala' &> /dev/null; then
-      export UPD_CMD='sudo nala upgrade'
-    else
-      export UPD_CMD='sudo apt update && sudo apt upgrade'
-    fi
-
-    # check if pacstall is installed (but suppress output of the check)   
-    if which 'pacstall' &> /dev/null; then
-        export UPD_CMD="$UPD_CMD && pacstall -Up"
-    fi
-elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'ManjaroLinux' ]; then
-    export UPD_CMD='sudo pacman -Syy'
-    # check if Pamac is installed (but suppress output of the check)
-    if which 'pamac' &> /dev/null; then
-        export UPD_CMD="sudo pamac update --aur --no-confirm"
-    # check if Yay is installed (but suppress output of the check)   
-    elif which 'yay' &> /dev/null; then
-        export UPD_CMD="$UPD_CMD && yay -Syu"
-    fi
-fi
-
-# check if Flatpak is installed (but suppress output of the check)   
-if command -v 'flatpak' &> /dev/null; then
-    #UPD_CMD=$(alias update)
-    alias update="$UPD_CMD && flatpak update"
-    # alias UpdateInTerminal="$UPD_CMD && flatpak update"
-else
-	alias update="$UPD_CMD"
-	# alias UpdateInTerminal="$UPD_CMD"
-fi
-
 #alias myip="curl http://ipecho.net/plain; echo"
 alias myip="curl https://ifconfig.me; echo"
 alias jctl="journalctl -p 3 -xb"
