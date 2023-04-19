@@ -20,6 +20,8 @@ Main() {
         elif which 'yay' &> /dev/null; then
             update_cmd="$update_cmd && yay -Syu"
         fi
+    elif [ "$DISTRO" = 'Fedora' ]; then
+        update_cmd="sudo dnf upgrade --refresh"
     fi
 
     # check if Flatpak is installed (but suppress output of the check)
@@ -33,7 +35,7 @@ Main() {
     fi
 
     # display and execute the command
-    echo "- System update with: $update_cmd"
+    echo -e "- System update with: $update_cmd"
     eval "$update_cmd"
     echo ""
 
