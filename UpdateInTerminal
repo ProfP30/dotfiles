@@ -21,12 +21,12 @@ Main() {
             update_cmd="$update_cmd && yay -Syu"
         fi
     elif [ "$DISTRO" = 'Fedora' ]; then
-        update_cmd="sudo dnf upgrade --refresh"
+        update_cmd="sudo dnf upgrade --refresh --best --allowerasing"
     fi
 
     # check if Flatpak is installed (but suppress output of the check)
     if command -v 'flatpak' &> /dev/null; then
-        update_cmd="$update_cmd && flatpak update"
+        update_cmd="$update_cmd && flatpak update && flatpak remove --unused"
     fi
 
     # check if Pacstall is installed (but suppress output of the check)
