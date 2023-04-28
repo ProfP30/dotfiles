@@ -34,3 +34,4 @@ alias yt='_y(){ yt-dlp -g ytsearch1:"$1" | awk ''NR==2''| xargs mpv  ; }; _y'
 
 alias github='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github'
 alias gitlab='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/gitlab'
+alias codeberg='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/codeberg'
