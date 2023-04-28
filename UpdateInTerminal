@@ -23,7 +23,7 @@ Main() {
             update_cmd="$update_cmd && yay -Syu"
         fi
     elif [ "$DISTRO" = 'Fedora' ]; then
-        update_cmd="sudo dnf upgrade --assumeyes --refresh --best --allowerasing"
+        update_cmd="sudo dnf upgrade --assumeyes --best --allowerasing"
     fi
 
     # check if Flatpak is installed (but suppress output of the check)
