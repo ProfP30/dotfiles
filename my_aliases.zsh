@@ -1,11 +1,19 @@
 #!/bin/bash
 #list
-alias ls='ls -lh --color=yes'
-alias la='ls -ah --color=yes | more'
-alias ll='ls -lah --color=yes | more'
-alias l.="ls -A | egrep '^\.'"
-alias dir='ls -lh --color=yes'
-alias dirp='ls -lihsa --color=yes | more'
+# alias ls='ls -lh --color=yes'
+# alias la='ls -ah --color=yes | more'
+# alias ll='ls -lah --color=yes | more'
+# alias l.="ls -A | egrep '^\.'"
+
+# Changing "ls" to "exa"
+alias ls='exa -al --color=always --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --group-directories-first'  # long format
+alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias l.='exa -a | egrep "^\."'
+
+alias dir='\ls -lh --color=yes'
+alias dirp='\ls -lihsa --color=yes | more'
 
 #grep
 alias grep='grep --colour=auto'
