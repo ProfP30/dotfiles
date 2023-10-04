@@ -89,8 +89,12 @@ Color=239,240,241
 Color=255,255,255
 
 [General]
+Anchor=0.5,0.5
 Blur=true
 ColorRandomization=false
 Description=Bernstein
-Opacity=1
+FillStyle=Tile
+Opacity=0.93
 Wallpaper=
+WallpaperFlipType=NoFlip
+WallpaperOpacity=1

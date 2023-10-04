@@ -151,4 +151,12 @@ ex ()
 #PS1='\u@\h:\w\$ '
 # neofetch
 
-PS1='$PWD\$ '
+#PS1='$PWD\$ '
+
+function _update_ps1() {
+    PS1=$(powerline-shell $?)
+}
+
+if [[ $TERM != linux && ! $PROMPT_COMMAND =~ _update_ps1 ]]; then
+    PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
+fi

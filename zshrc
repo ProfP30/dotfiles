@@ -106,6 +106,8 @@ fi
 export LC_ALL="de_DE.UTF-8"
 export LANGUAGE="de_DE.UTF-8"
 export PAGER="most"
+# Qt-Dialogs in Mozilla apps
+export GTK_USE_PORTAL=1
 
 LS_COLORS='ow=01;36;40'
 #export LS_COLORS="ow=01;36;40"
