@@ -55,4 +55,4 @@ ex ()
 function ytp() { mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"; }
 
 # youtube-get/grab (as mp3)
-function ytg() { yt-dlp --extract-audio --audio-format mp3 --audio-quality 0 "$1" }
+function ytg() { yt-dlp --extract-audio --audio-format mp3 --audio-quality 0 "ytsearch: $1" }

@@ -122,3 +122,7 @@ LS_COLORS='ow=01;36;40'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # neofetch
+
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+fi

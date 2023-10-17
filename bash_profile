@@ -17,3 +17,7 @@ export PATH=$HOME/.local/bin:$PATH
 
 # Use less command as a pager
 export PAGER=less
+
+if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+    export MOZ_ENABLE_WAYLAND=1
+fi
