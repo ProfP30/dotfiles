@@ -38,8 +38,15 @@ alias flatpak-list='flatpak list --columns=name,application,version,branch,size'
 alias google='{read -r arr; browser "https://google.com/search?q=${arr}";} <<<'
 alias search='{read -r arr; xdg-open "https://www.ecosia.org/search?q=${arr}";} <<<'
 
-alias yt='_y(){ yt-dlp -g ytsearch1:"$1" | awk ''NR==2''| xargs mpv  ; }; _y'
-
 alias github='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github'
 alias gitlab='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/gitlab'
 alias codeberg='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/codeberg'
+
+if [[ -s $HOME/.local/bin/UpdateInTerminal ]]; then
+	alias update='$HOME/.local/bin/UpdateInTerminal'
+fi
+
+# check if Pacstall is installed (but suppress output of the check)
+if command -v 'vscodium' &> /dev/null; then
+    alias code='vscodium'
+fi

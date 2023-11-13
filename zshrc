@@ -73,7 +73,10 @@ export DISTRO="$(lsb_release -si)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
-plugins=(sudo history-substring-search)
+plugins=(
+	sudo
+	history-substring-search
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,7 +98,7 @@ export SUDO_EDITOR='micro'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
-if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ] || [ "$DISTRO"  = 'Fedora' ]; then
+if [ "$DISTRO"  = 'Debian' ] || [ "$DISTRO"  = 'Siduction' ] || [ "$DISTRO"  = 'Ubuntu' ] || [ "$DISTRO"  = 'Fedora Linux' ]; then
 	source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 	source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 elif [ "$DISTRO"  = 'Arch' ] || [ "$DISTRO"  = 'EndeavourOS' ] || [ "$DISTRO"  = 'ManjaroLinux' ]; then

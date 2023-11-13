@@ -55,4 +55,27 @@ ex ()
 function ytp() { mpv --ytdl-format=bestaudio ytdl://ytsearch:"$*"; }
 
 # youtube-get/grab (as mp3)
-function ytg() { yt-dlp --extract-audio --audio-format mp3 --audio-quality 0 "ytsearch: $1" }
+# --audio-quality   # 0=best 10=worst default=5
+function yte() { yt-dlp --extract-audio --audio-format mp3 --default-search ytsearch "$1" }
+
+function top-history() {
+	about 'print the name and count of the most commonly run tools'
+
+	# - Make sure formatting doesn't interfer with our parsing
+	# - Use awk to count how many times the first command on each line has been called
+	# - Truncate to 10 lines
+	# - Print in column format
+	HISTTIMEFORMAT='' history \
+		| awk '{
+				a[$2]++
+			}END{
+				for(i in a)
+				printf("%s\t%s\n", a[i], i)
+			}' \
+		| sort --reverse --numeric-sort \
+		| head \
+		| column \
+			--table \
+			--table-columns 'Command Count,Command Name' \
+			--output-separator ' | '
+}
