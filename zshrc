@@ -1,18 +1,20 @@
+#!/usr/bin/env bash
 # If you come from bash you might have to change your $PATH.
 #export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/$USER/.oh-my-zsh"
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="agnoster"
+export ZSH_THEME="agnoster"
 
-export DISTRO="$(lsb_release -si)"
+DISTRO=$(lsb_release -si)
+export DISTRO
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -73,12 +75,9 @@ export DISTRO="$(lsb_release -si)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
-plugins=(
-	sudo
-	history-substring-search
-)
+export plugins=(sudo history-substring-search)
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH"/oh-my-zsh.sh
 
 # User configuration
 
@@ -112,8 +111,7 @@ export PAGER="most"
 # Qt-Dialogs in Mozilla apps
 export GTK_USE_PORTAL=1
 
-LS_COLORS='ow=01;36;40'
-#export LS_COLORS="ow=01;36;40"
+export LS_COLORS="ow=01;36;40"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
