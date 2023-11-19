@@ -79,3 +79,8 @@ function top-history() {
 			--table-columns 'Command Count,Command Name' \
 			--output-separator ' | '
 }
+
+# shorten xdg-open to open and suppress console outputs
+function open() {
+	xdg-open $1 &>/dev/null
+}
