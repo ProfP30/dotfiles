@@ -9,9 +9,9 @@ Main() {
     if [ "$DISTRO" = 'Debian' ] || [ "$DISTRO" = 'Siduction' ] || [ "$DISTRO" = 'Ubuntu' ]; then
         # check if nala is installed (but suppress output of the check)
         if which 'nala' &> /dev/null; then
-            update_cmd='sudo nala update && sudo nala upgrade'
+            update_cmd='sudo nala update && sudo nala upgrade --autoremove'
         else
-            update_cmd='sudo apt update && sudo apt upgrade'
+            update_cmd='sudo apt update && sudo apt upgrade --autoremove'
         fi
     elif [ "$DISTRO" = 'Arch' ] || [ "$DISTRO" = 'EndeavourOS' ] || [ "$DISTRO" = 'ManjaroLinux' ]; then
         update_cmd='sudo pacman -Syy'

@@ -124,6 +124,6 @@ export LS_COLORS="ow=01;36;40"
 
 # neofetch
 
-if [ "$XDG_SESSION_TYPE" == "wayland" ]; then
+if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
     export MOZ_ENABLE_WAYLAND=1
 fi
