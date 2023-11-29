@@ -9,9 +9,9 @@ Main() {
     if [ "$DISTRO" = 'Debian' ] || [ "$DISTRO" = 'Siduction' ] || [ "$DISTRO" = 'Ubuntu' ]; then
         # check if nala is installed (but suppress output of the check)
         if which 'nala' &> /dev/null; then
-            update_cmd='sudo nala update && sudo nala upgrade --autoremove'
+            update_cmd='sudo nala update && sudo nala upgrade --assume-yes --autoremove'
         else
-            update_cmd='sudo apt update && sudo apt upgrade --autoremove'
+            update_cmd='sudo apt update && sudo apt upgrade --yes --autoremove'
         fi
     elif [ "$DISTRO" = 'Arch' ] || [ "$DISTRO" = 'EndeavourOS' ] || [ "$DISTRO" = 'ManjaroLinux' ]; then
         update_cmd='sudo pacman -Syy'
@@ -26,7 +26,7 @@ Main() {
         fi
         # check if paru is installed (suppress output of the check)
         if which 'paru' &> /dev/null; then
-            update_cmd_aur_helper="$update_cmd && paru -Syu"
+            update_cmd_aur_helper="$update_cmd && paru -Syu --noconfirm"
         fi
         update_cmd="$update_cmd_aur_helper"
     elif [ "$DISTRO" = 'Fedora' ]; then
