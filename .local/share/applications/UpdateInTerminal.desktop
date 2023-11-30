@@ -1,0 +1,21 @@
+[Desktop Entry]
+Categories=System
+Comment=System-Update in Terminal
+Comment[de_DE]=System-Update im Terminal
+Encoding=UTF-8
+Exec=konsole -e '/home/paul/.dotfiles/.local/bin/UpdateInTerminal.sh wait_for_exit'
+GenericName=UpdateInTerminal
+Hidden=false
+Icon=update-low
+MimeType=
+Name=UpdateInTerminal
+Path=
+StartupNotify=true
+Terminal=false
+TerminalOptions=
+Type=Application
+X-GNOME-Autostart-enabled=true
+X-KDE-SubstituteUID=false
+X-KDE-Username=
+X-KDE-autostart-after=panel
+
