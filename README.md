@@ -78,8 +78,10 @@ On Fedora:
 
 ## Micro Editor Keybindings
 
-    rm ~/.config/micro/bindings.json && ln -s ~/.dotfiles/.config/micro/bindings.json ~/.config/micro/bindings.json
+		rm ~/.config/micro/bindings.json && ln -s ~/.dotfiles/.config/micro/bindings.json ~/.config/micro/bindings.json
 
-## Global Update-command
+## Useful scripts
 
-    ln -s ~/.dotfiles/UpdateInTerminal ~/.local/bin/UpdateInTerminal
+		rm ~/.local/bin/manjaro-housekeeping &>/dev/null && ln -s ~/.dotfiles/.local/bin/manjaro-housekeeping.sh ~/.local/bin/manjaro-housekeeping
+
+		rm ~/.local/bin/UpdateInTerminal &>/dev/null && ln -s ~/.dotfiles/.local/bin/UpdateInTerminal.sh ~/.local/bin/UpdateInTerminal
