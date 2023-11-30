@@ -82,6 +82,6 @@ On Fedora:
 
 ## Useful scripts
 
-		rm ~/.local/bin/manjaro-housekeeping &>/dev/null && ln -s ~/.dotfiles/.local/bin/manjaro-housekeeping.sh ~/.local/bin/manjaro-housekeeping
+		rm ~/.local/bin/manjaro-housekeeping &>/dev/null; ln -s ~/.dotfiles/.local/bin/manjaro-housekeeping.sh ~/.local/bin/manjaro-housekeeping
 
-		rm ~/.local/bin/UpdateInTerminal &>/dev/null && ln -s ~/.dotfiles/.local/bin/UpdateInTerminal.sh ~/.local/bin/UpdateInTerminal
+		rm ~/.local/bin/UpdateInTerminal &>/dev/null; ln -s ~/.dotfiles/.local/bin/UpdateInTerminal.sh ~/.local/bin/UpdateInTerminal
