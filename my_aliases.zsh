@@ -46,7 +46,11 @@ if [[ -s $HOME/.local/bin/UpdateInTerminal ]]; then
 	alias update='$HOME/.local/bin/UpdateInTerminal'
 fi
 
-# check if Pacstall is installed (but suppress output of the check)
 if command -v 'vscodium' &> /dev/null; then
     alias code='vscodium'
 fi
+
+if command -v 'python3' &> /dev/null; then
+    alias python='python3'
+fi
+
