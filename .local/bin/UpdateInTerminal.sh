@@ -22,11 +22,11 @@ Main() {
         fi
         # check if yay is installed (suppress output of the check)
         if which 'yay' &> /dev/null; then
-            update_cmd_aur_helper="$update_cmd && yay -Syu"
+            update_cmd_aur_helper="yay -Syu"
         fi
         # check if paru is installed (suppress output of the check)
         if which 'paru' &> /dev/null; then
-            update_cmd_aur_helper="$update_cmd && paru -Syu --noconfirm"
+            update_cmd_aur_helper="paru -Syu --noconfirm"
         fi
         update_cmd="$update_cmd_aur_helper"
     elif [ "$DISTRO" = 'Fedora' ]; then
