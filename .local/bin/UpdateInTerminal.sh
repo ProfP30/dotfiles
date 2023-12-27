@@ -40,7 +40,7 @@ Main() {
 
     # check if Pacstall is installed (but suppress output of the check)
     if command -v 'pacstall' &> /dev/null; then
-        update_cmd="$update_cmd && pacstall -Up"
+        update_cmd="$update_cmd && pacstall -Up -P"
     fi
 
     # display and execute the command
