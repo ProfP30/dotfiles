@@ -19,16 +19,15 @@ Main() {
         # check if pamac is installed (suppress output of the check)
         if which 'pamac' &> /dev/null; then
             update_cmd="sudo pamac update --aur --no-confirm"
-        fi
         # check if yay is installed (suppress output of the check)
-        if which 'yay' &> /dev/null; then
+        elif which 'yay' &> /dev/null; then
             update_cmd_aur_helper="yay -Syu"
-        fi
+            update_cmd="$update_cmd_aur_helper"
         # check if paru is installed (suppress output of the check)
-        if which 'paru' &> /dev/null; then
+        else which 'paru' &> /dev/null;
             update_cmd_aur_helper="paru -Syu --noconfirm"
+            update_cmd="$update_cmd_aur_helper"
         fi
-        update_cmd="$update_cmd_aur_helper"
     elif [ "$DISTRO" = 'Fedora' ]; then
         update_cmd="sudo dnf upgrade --assumeyes --best --allowerasing"
     fi
@@ -49,7 +48,7 @@ Main() {
     echo ""
 
     if [ "$1" = "wait_for_exit" ]; then
-        read -p "Press ENTER to close this window. . ."
+        read -rp "Press ENTER to close this window. . ."
     fi
 
     exit
