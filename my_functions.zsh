@@ -5,7 +5,7 @@ function logout() {
        mate) mate-session-save --logout                        ;;
        MATE) mate-session-save --logout                        ;;
        LXQt) lxqt-leave --logout                               ;;
-        *KDE*) qdbus org.kde.ksmserver /KSMServer logout 0 3 3  ;;
+        *KDE*) qdbus org.kde.Shutdown /Shutdown logout  ;;
 
        *) echo "Sorry, Desktop Environment is uknown (no xfce/mate/lxqt/plasma)!" ;;
     esac
