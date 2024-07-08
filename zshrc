@@ -93,7 +93,8 @@ else
   export EDITOR='micro'
 fi
 
-export SUDO_EDITOR='micro'
+export SUDOEDIT=$EDITOR
+export TERMINAL=/usr/bin/konsole
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
