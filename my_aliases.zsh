@@ -23,6 +23,7 @@ alias fgrep='fgrep --colour=auto'
 alias shutdown='systemctl poweroff'
 alias poweroff='systemctl poweroff'
 alias reboot='systemctl reboot'
+alias restart-plasma='systemctl restart --user plasma-plasmashell'
 
 #fix obvious typos
 alias cls='clear'
@@ -33,10 +34,6 @@ alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 #alias myip="curl http://ipecho.net/plain; echo"
 alias myip="curl https://ifconfig.me; echo"
 alias jctl="journalctl -p 3 -xb"
-
-alias flatpak-list='flatpak list --columns=name,application,version,branch,size'
-alias google='{read -r arr; browser "https://google.com/search?q=${arr}";} <<<'
-alias search='{read -r arr; xdg-open "https://www.ecosia.org/search?q=${arr}";} <<<'
 
 alias github='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github'
 alias gitlab='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/gitlab'

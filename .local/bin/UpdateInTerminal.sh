@@ -16,18 +16,28 @@ Main() {
     elif [ "$DISTRO" = 'Arch' ] || [ "$DISTRO" = 'EndeavourOS' ]; then
         update_cmd='sudo pacman -Syy'
         update_cmd_aur_helper=''
+<<<<<<< HEAD
 
+=======
+        # check if pamac is installed (suppress output of the check)
+        if which 'pamac' &> /dev/null; then
+            update_cmd="sudo pamac update --aur --no-confirm"
+>>>>>>> ee63fff310f892254f9a3ccd06918ffd820575f5
         # check if yay is installed (suppress output of the check)
-        if which 'yay' &> /dev/null; then
+        elif which 'yay' &> /dev/null; then
             update_cmd_aur_helper="yay -Syu"
-        fi
+            update_cmd="$update_cmd_aur_helper"
         # check if paru is installed (suppress output of the check)
-        if which 'paru' &> /dev/null; then
+        else which 'paru' &> /dev/null;
             update_cmd_aur_helper="paru -Syu --noconfirm"
+            update_cmd="$update_cmd_aur_helper"
         fi
+<<<<<<< HEAD
         update_cmd="$update_cmd_aur_helper"
     elif [ "$DISTRO" = 'ManjaroLinux' ]; then
             update_cmd="sudo pamac update --aur --no-confirm"
+=======
+>>>>>>> ee63fff310f892254f9a3ccd06918ffd820575f5
     elif [ "$DISTRO" = 'Fedora' ]; then
         update_cmd="sudo dnf upgrade --assumeyes --best --allowerasing"
     fi
@@ -39,7 +49,7 @@ Main() {
 
     # check if Pacstall is installed (but suppress output of the check)
     if command -v 'pacstall' &> /dev/null; then
-        update_cmd="$update_cmd && pacstall -Up"
+        update_cmd="$update_cmd && pacstall -Up -P"
     fi
 
     # display and execute the command
@@ -48,7 +58,7 @@ Main() {
     echo ""
 
     if [ "$1" = "wait_for_exit" ]; then
-        read -p "Press ENTER to close this window. . ."
+        read -rp "Press ENTER to close this window. . ."
     fi
 
     exit
