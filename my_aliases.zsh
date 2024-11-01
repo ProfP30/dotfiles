@@ -47,10 +47,6 @@ if command -v 'vscodium' &> /dev/null; then
     alias code='vscodium'
 fi
 
-alias restart_plasma="systemctl restart --user plasma-plasmashell"
-# alias restart_plasma="kquitapp6 plasmashell && plasmashell" # <-- ?
-
 if command -v 'python3' &> /dev/null; then
     alias python='python3'
 fi
-
