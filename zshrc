@@ -128,3 +128,6 @@ export LS_COLORS="ow=01;36;40"
 if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
     export MOZ_ENABLE_WAYLAND=1
 fi
+autoload bashcompinit
+bashcompinit
+source "/home/paul/.local/share/bash-completion/completions/am"
