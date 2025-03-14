@@ -22,14 +22,14 @@ Main() {
         # check if aura is installed (suppress output of the check)
         elif which 'aura' &> /dev/null; then
             update_cmd="aura -Syu && aura -Akaxu"
-        # check if yay is installed (suppress output of the check)
-        elif which 'yay' &> /dev/null; then
-            update_cmd_aur_helper="yay -Syu"
-            update_cmd="$update_cmd_aur_helper"
         # check if paru is installed (suppress output of the check)
-        else which 'paru' &> /dev/null;
+        elif which 'paru' &> /dev/null; then
             update_cmd_aur_helper="paru -Syu --noconfirm"
             update_cmd="$update_cmd_aur_helper"
+        # check if yay is installed (suppress output of the check)
+        else which 'yay' &> /dev/null; 
+            update_cmd_aur_helper="yay -Syu"
+            update_cmd="$update_cmd_aur_helper"        
         fi
     elif [ "$DISTRO" = 'Fedora' ]; then
         update_cmd="sudo dnf upgrade --assumeyes --best --allowerasing"
