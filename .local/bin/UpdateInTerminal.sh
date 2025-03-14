@@ -13,12 +13,15 @@ Main() {
         else
             update_cmd='sudo apt update && sudo apt upgrade --yes --autoremove'
         fi
-    elif [ "$DISTRO" = 'Arch' ] || [ "$DISTRO" = 'EndeavourOS' ]; then
+    elif [ "$DISTRO" = 'Arch' ] || [ "$DISTRO" = 'EndeavourOS' ] || [ "$DISTRO" = 'ManjaroLinux' ] || [ "$DISTRO" = 'CachyOS' ]; then
         update_cmd='sudo pacman -Syy'
         update_cmd_aur_helper=''
         # check if pamac is installed (suppress output of the check)
         if which 'pamac' &> /dev/null; then
             update_cmd="sudo pamac update --aur --no-confirm"
+        # check if aura is installed (suppress output of the check)
+        elif which 'aura' &> /dev/null; then
+            update_cmd="aura -Syu && aura -Akaxu"
         # check if yay is installed (suppress output of the check)
         elif which 'yay' &> /dev/null; then
             update_cmd_aur_helper="yay -Syu"
