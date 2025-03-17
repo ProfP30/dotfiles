@@ -13,7 +13,7 @@ Main() {
         else
             update_cmd='sudo apt update && sudo apt upgrade --yes --autoremove'
         fi
-    elif [ "$DISTRO" = 'Arch' ] || [ "$DISTRO" = 'EndeavourOS' ] || [ "$DISTRO" = 'ManjaroLinux' ] || [ "$DISTRO" = 'CachyOS' ]; then
+    elif [ "$DISTRO" = 'Arch' ] || [ "$DISTRO" = 'EndeavourOS' ] || [ "$DISTRO" = 'ManjaroLinux' ] || [ "$DISTRO" = 'cachyos' ]; then
         update_cmd='sudo pacman -Syy'
         update_cmd_aur_helper=''
         # check if pamac is installed (suppress output of the check)
