@@ -7,20 +7,20 @@
 
 # Changing "ls" to "eza"
 #alias ls='eza              --icons --color=always --group-directories-first' # my preferred listing
-alias la='eza --all        --icons --color=always --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # all files and dirs
-alias ll='eza --long       --icons --color=always --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # long format
-alias lt='eza --all --tree --icons --color=always --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # tree listing
-alias l.='eza --all | egrep "^\."'
+alias la='eza --all           --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # all files and dirs
+alias ll='eza --long --header --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # long format
+alias lt='eza --all --tree    --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # tree listing
+alias l.='eza --all | grep -E "^\."'
 
 #alias dir='ls -l --human-readable --color=auto --time-style=long-iso --group-directories-first'
 #alias dirp='ls -lisah --color=auto | more'
-alias dir='eza       --long --icons --color=always --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # my preferred listing
-alias dira='eza --all --long --icons --color=always --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # my preferred listing
-alias dirp='eza --all --icons --color=always --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"|less' # my preferred listing
+alias  dir='eza       --long --header --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"'
+alias dira='eza --all --long --header --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"'
+alias dirp='eza --all  --color=always --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"|less'
 
 #grep
-alias grep='grep --colour=auto'
-alias egrep='egrep --colour=auto'
+alias  grep='grep --colour=auto'
+alias egrep='grep -E --colour=auto'
 alias fgrep='fgrep --colour=auto'
 
 alias shutdown='systemctl poweroff'
