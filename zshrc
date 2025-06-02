@@ -112,6 +112,7 @@ export PAGER="most"
 # Qt-Dialogs in Mozilla apps
 export GTK_USE_PORTAL=1
 
+# export LS_COLORS="di=36"  # Changes directory color to cyan
 export LS_COLORS="ow=01;36;40"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
@@ -122,12 +123,3 @@ export LS_COLORS="ow=01;36;40"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# neofetch
-
-if [[ "$XDG_SESSION_TYPE" == "wayland" ]]; then
-    export MOZ_ENABLE_WAYLAND=1
-fi
-autoload bashcompinit
-bashcompinit
-source "/home/paul/.local/share/bash-completion/completions/am"
