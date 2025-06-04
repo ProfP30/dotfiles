@@ -6,22 +6,23 @@
 # alias l.="ls -A | egrep '^\.'"
 
 # Changing "ls" to "eza"
-#alias ls='eza              --icons --color=always --group-directories-first' # my preferred listing
-alias la='eza --all           --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # all files and dirs
-alias ll='eza --long --header --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # long format
+alias ls='eza       --long --header --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # all files and dirs
+alias la='eza --all --long --header --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # all files and dirs
+alias ll='eza       --long --header --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # long format
 alias lt='eza --all --tree    --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"' # tree listing
 alias l.='eza --all | grep -E "^\."'
 
 #alias dir='ls -l --human-readable --color=auto --time-style=long-iso --group-directories-first'
 #alias dirp='ls -lisah --color=auto | more'
-alias  dir='eza       --long --header --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"'
-alias dira='eza --all --long --header --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"'
-alias dirp='eza --all  --color=always --icons --group-directories-first --time-style "+%Y-%m-%d %H:%M:%S"|less'
+alias  dir='ls'
+alias dira='la'
+alias dirp='la --color=always | bat'
 
 #grep
-alias  grep='grep --colour=auto'
-alias egrep='grep -E --colour=auto'
-alias fgrep='fgrep --colour=auto'
+#alias  grep='grep --colour=auto'
+alias  grep='batgrep'
+alias egrep='batgrep -E' # extended search (RegExp)
+alias fgrep='batgrep -F' # fixed strings
 
 alias shutdown='systemctl poweroff'
 alias poweroff='systemctl poweroff'
@@ -30,7 +31,7 @@ alias restart-plasma='systemctl restart --user plasma-plasmashell'
 
 #fix obvious typos
 alias cls='clear'
-alias cd..='cd ..'
+#alias cd..='cd ..'
 
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 

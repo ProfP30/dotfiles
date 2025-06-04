@@ -75,7 +75,7 @@ export DISTRO
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
-export plugins=(sudo history-substring-search)
+export plugins=(sudo history-substring-search zoxide)
 
 source "$ZSH"/oh-my-zsh.sh
 
@@ -108,7 +108,7 @@ fi
 
 export LC_ALL="de_DE.UTF-8"
 export LANGUAGE="de_DE.UTF-8"
-export PAGER="most"
+export PAGER="bat"
 # Qt-Dialogs in Mozilla apps
 export GTK_USE_PORTAL=1
 
