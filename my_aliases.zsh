@@ -34,8 +34,7 @@ alias cls='clear'
 
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 
-#alias myip="curl http://ipecho.net/plain; echo"
-alias myip="curl https://ifconfig.me; echo"
+alias myip="curl -s ifconfig.me; echo"
 alias jctl="journalctl -p 3 -xb"
 
 alias github='eval "$(ssh-agent -s)" && ssh-add ~/.ssh/github'
