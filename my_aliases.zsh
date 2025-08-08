@@ -19,10 +19,9 @@ alias dira='la'
 alias dirp='la --color=always | bat'
 
 #grep
-#alias  grep='grep --colour=auto'
-alias  grep='batgrep'
-alias egrep='batgrep -E' # extended search (RegExp)
-alias fgrep='batgrep -F' # fixed strings
+alias  grep='grep --colour=auto'
+alias egrep='grep -E' # extended search (RegExp)
+alias fgrep='grep -F' # fixed strings
 
 alias shutdown='systemctl poweroff'
 alias poweroff='systemctl poweroff'
@@ -54,3 +53,5 @@ fi
 if command -v 'python3' &> /dev/null; then
     alias python='python3'
 fi
+
+alias yazi='flatpak run io.github.sxyazi.yazi'
